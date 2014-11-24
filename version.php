@@ -27,7 +27,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-$plugin->component = auth_azureoauth2
+$plugin->component = 'auth_azureoauth2';
 $plugin->version  = 2014112100;
 $plugin->requires = 2014101000;   // Requires Moodle 2.8 or later
 $plugin->release = '0.1 (Build: 2014112100)';
