@@ -22,18 +22,19 @@
  * @author Adam Matara
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'Azure Oauth2/AD Auth';
-$string['auth_azureoauth2description'] = 'Allow a user to connect to the site using Azure AD credentials. The first time the user connects, a new account is created. <a href="'.$CFG->wwwroot.'/admin/search.php?query=authpreventaccountcreation">Prevent account creation when authenticating</a> <b>must</b> be unset.';
-$string['auth_azureclientid'] = 'Generate your clientid, secret, tenantid in using the <a href="https://manage.windowsazure.com/">Windows Azure portal</a>:
+$string['providername'] = 'Office 365';
+$string['pluginname'] = 'Azure AD OAuth2';
+$string['auth_azureoauth2description'] = 'This method provides authentication against Azure AD (Office 365). If the given username and password are valid, Moodle can create a new user entry in its database.  To disable new account creation see ‘<a href="'.$CFG->wwwroot.'/admin/search.php?query=authpreventaccountcreation">Prevent account creation when authenticating</a>’.  This module can read user attributes from Azure AD and prefill wanted fields in Moodle.';
+$string['auth_azureclientid'] = 'Generate your clientid, secret, and tenantid using the <a href="https://manage.windowsazure.com/">Windows Azure portal</a>:
 <br/>Redirect URL: '. $CFG->httpswwwroot . '/auth/azureoauth2/azure_redirect.php';
 $string['auth_azureclientid_key'] = 'Client ID';
 $string['auth_azureclientsecret'] = 'See above.';
-$string['auth_azureclientsecret_key'] = 'Client secret';
-$string['auth_azuretenantid'] = 'Hint - you can find this in the endpoints ( Azure Application)';
-$string['auth_azuretenantid_key'] = 'TenantID';
+$string['auth_azureclientsecret_key'] = 'Client Secret';
+$string['auth_azuretenantid'] = 'On the Azure Management Portal click the <b>View Endpoints</b> button and copy the GUID from any endpoint available.  For example,  from https://login.windows.net/f9d3e034-03ca-4e58-8799-3c112417378d/oauth2/token?api-version=1.0 copy and paste f9d3e034-03ca-4e58-8799-3c112417378d';
+$string['auth_azuretenantid_key'] = 'Tenant ID';
 $string['auth_appid'] = 'See Above.';
 $string['auth_appid_key'] = 'App ID';
-$string['auth_domain'] = 'Set the domain login hint - this will redirect users to your Azure organisational login page.';
+$string['auth_domain'] = 'Set the domain login hint - this will redirect users to your Azure organisational login page associated with your Tenant ID. For example, contoso.com';
 $string['auth_domain_key'] = 'Domain';
 $string['couldnotauthenticate'] = 'The authentication failed - Please try to sign-in again.';
 $string['couldnotgetazureaccesstoken'] = 'The authentication provider sent us a communication error. Please try to sign-in again.';

@@ -40,7 +40,7 @@ class user_loggedin extends \core\event\base {
      * @return string
      */
     public function get_description() {
-        return "The user $this->relateduserid has sent logged in with Oauth2.";
+        return "The user $this->relateduserid has been logged in via Azure AD Oauth2.";
     }
 
     /**

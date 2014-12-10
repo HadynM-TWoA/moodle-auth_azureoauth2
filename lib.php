@@ -97,13 +97,13 @@ function auth_azureoauth2_render_buttons() {
 	$html .= "<div style=\"width:'1%'\">";
     $a = new stdClass();
 
-    $a->providername = 'Azure';
+    $a->providername = get_string('providername', 'auth_azureoauth2');
     $providerisenabled = get_config('auth/azureoauth2', 'azureclientid');
 	
   
 	$displayprovider = ((empty($authprovider) || $authprovider == 'azure' || $allauthproviders) && $providerisenabled);
 	$providerdisplaystyle = $displayprovider?'display:inline-block;padding:10px;':'display:none;';
-	$html .= '<div class="singinprovider" style="'. $providerdisplaystyle .'">
+	$html .= '<div class="signinprovider" style="'. $providerdisplaystyle .'">
             <a class="zocial windows" href="https://login.windows.net/'. get_config('auth/azureoauth2', 'azuretenantid') .'/oauth2/authorize?api-version=1.0&client_id='. get_config('auth/azureoauth2', 'azureappid') .'&redirect_uri='. $CFG->httpswwwroot .'/auth/azureoauth2/azure_redirect.php&state=' .auth_azureoauth2_get_state_token(). '&response_type=code&domain_hint='.get_config('auth/azureoauth2', 'azuredomain') . '">
                 '.get_string('auth_sign-in_with','auth_azureoauth2', $a).'
             </a>
